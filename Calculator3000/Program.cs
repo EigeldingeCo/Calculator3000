@@ -260,6 +260,17 @@ namespace Calculator3000
 
             Console.WriteLine("Votre moyenne est de {0}", dblMoyenneM304);
             Console.ReadLine();
+
+            Console.WriteLine("Atelier : {0}", dblMoyenneAt);
+            Console.WriteLine("Français : {0}", dblMoyenneFr);
+            Console.WriteLine("Math : {0}", dblMoyenneMa);
+            Console.WriteLine("Physique : {0}", dblMoyennePhy);
+            Console.WriteLine("Anglais : {0}", dblMoyenneAng);
+            Console.WriteLine("Histoire : {0}", dblMoyenneHis);
+            Console.WriteLine("Module 100 : {0}", dblMoyenneM100);
+            Console.WriteLine("Module 101 : {0}", dblMoyenneM101);
+            Console.WriteLine("Module 304 : {0}", dblMoyenneM304);
+            Console.ReadLine();
         }
     }
 }
