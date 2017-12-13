@@ -34,6 +34,18 @@ namespace Calculator3000
             double dblNoteSaisieHis;
             double dblMoyenneHis;
 
+            double dblNoteM100 = 0;
+            double dblNoteSaisieM100;
+            double dblMoyenneM100;
+
+            double dblNoteM101 = 0;
+            double dblNoteSaisieM101;
+            double dblMoyenneM101;
+
+            double dblNoteM304 = 0;
+            double dblNoteSaisieM304;
+            double dblMoyenneM304;
+
             Console.Write("Combien de notes d'atelier voulez-vous insérer? : ");
             string strnbNoteAt = Console.ReadLine();
             int iNbNoteAt = Convert.ToInt32(strnbNoteAt);
@@ -175,6 +187,30 @@ namespace Calculator3000
 
 
             Console.WriteLine("Votre moyenne est de {0}", dblMoyenneHis);
+            Console.ReadLine();
+
+            Console.Write("Combien de notes de module 100 voulez-vous insérer? : ");
+            string strnbNoteM100 = Console.ReadLine();
+            int iNbNoteM100 = Convert.ToInt32(strnbNoteM100);
+            int iNoteResM100 = iNbNoteM100;
+
+            do
+            {
+                Console.Write("Entrez votre note : ");
+                string strSaisieM100 = Console.ReadLine();
+                dblNoteSaisieM100 = Convert.ToDouble(strSaisieM100);
+
+                dblNoteM100 += dblNoteSaisieM100;
+
+                iNoteResM100 -= 1;
+
+            }
+            while (iNoteResM100 != 0);
+
+            dblMoyenneM100 = dblNoteM100 / iNbNoteM100;
+
+
+            Console.WriteLine("Votre moyenne est de {0}", dblMoyenneM100);
             Console.ReadLine();
         }
     }
