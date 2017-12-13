@@ -22,6 +22,10 @@ namespace Calculator3000
             double dblNoteSaisieMa;
             double dblMoyenneMa;
 
+            double dblNotePhy = 0;
+            double dblNoteSaisiePhy;
+            double dblMoyennePhy;
+
             Console.Write("Combien de notes d'atelier voulez-vous insérer? : ");
             string strnbNoteAt = Console.ReadLine();
             int iNbNoteAt = Convert.ToInt32(strnbNoteAt);
@@ -93,7 +97,29 @@ namespace Calculator3000
             Console.WriteLine("Votre moyenne de math est de {0}", dblMoyenneMa);
             Console.ReadLine();
 
+            Console.Write("Combien de notes de physique voulez-vous insérer? : ");
+            string strnbNotePhy = Console.ReadLine();
+            int iNbNotePhy = Convert.ToInt32(strnbNotePhy);
+            int iNoteResPhy = iNbNotePhy;
 
+
+            do
+            {
+                Console.Write("Entrez votre note : ");
+                string strSaisiePhy = Console.ReadLine();
+                dblNoteSaisiePhy = Convert.ToDouble(strSaisiePhy);
+
+                dblNotePhy += dblNoteSaisiePhy;
+
+                iNoteResPhy -= 1;
+
+            }
+            while (iNoteResPhy != 0);
+
+            dblMoyennePhy = dblNotePhy / iNbNotePhy;
+
+            Console.WriteLine("Votre moyenne est de {0}", dblMoyennePhy);
+            Console.ReadLine();
         }
     }
 }
