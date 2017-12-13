@@ -212,6 +212,30 @@ namespace Calculator3000
 
             Console.WriteLine("Votre moyenne est de {0}", dblMoyenneM100);
             Console.ReadLine();
+
+            Console.Write("Combien de notes de module 101 voulez-vous insérer? : ");
+            string strnbNoteM101 = Console.ReadLine();
+            int iNbNoteM101 = Convert.ToInt32(strnbNoteM101);
+            int iNoteResM101 = iNbNoteM101;
+
+            do
+            {
+                Console.Write("Entrez votre note : ");
+                string strSaisieM101 = Console.ReadLine();
+                dblNoteSaisieM101 = Convert.ToDouble(strSaisieM101);
+
+                dblNoteM101 += dblNoteSaisieM101;
+
+                iNoteResM101 -= 1;
+
+            }
+            while (iNoteResM101 != 0);
+
+            dblMoyenneM101 = dblNoteM101 / iNbNoteM101;
+
+
+            Console.WriteLine("Votre moyenne est de {0}", dblMoyenneM101);
+            Console.ReadLine();
         }
     }
 }
