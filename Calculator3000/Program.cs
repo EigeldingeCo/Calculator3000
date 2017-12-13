@@ -68,7 +68,6 @@ namespace Calculator3000
 
 
             Console.WriteLine("Votre moyenne est de {0}", dblMoyenneAt);
-            Console.ReadLine();
 
             Console.Write("Combien de notes de français voulez-vous insérer? : ");
             string strnbNoteFr = Console.ReadLine();
@@ -91,7 +90,7 @@ namespace Calculator3000
             dblMoyenneFr = dblNoteFr / iNbNoteFr;
 
             Console.WriteLine("Votre moyenne est de {0}", dblMoyenneFr);
-            Console.ReadLine();
+
 
             Console.Write("Combien de notes de math voulez-vous insérer? : ");
             string strnbNoteMa = Console.ReadLine();
@@ -115,7 +114,7 @@ namespace Calculator3000
             dblMoyenneMa = dblNoteMa / iNbNoteMa;
 
             Console.WriteLine("Votre moyenne de math est de {0}", dblMoyenneMa);
-            Console.ReadLine();
+
 
             Console.Write("Combien de notes de physique voulez-vous insérer? : ");
             string strnbNotePhy = Console.ReadLine();
@@ -139,7 +138,7 @@ namespace Calculator3000
             dblMoyennePhy = dblNotePhy / iNbNotePhy;
 
             Console.WriteLine("Votre moyenne est de {0}", dblMoyennePhy);
-            Console.ReadLine();
+
 
             Console.Write("Combien de notes d'anglais voulez-vous insérer? : ");
             string strnbNoteAng = Console.ReadLine();
@@ -163,7 +162,7 @@ namespace Calculator3000
 
 
             Console.WriteLine("Votre moyenne est de {0}", dblMoyenneAng);
-            Console.ReadLine();
+
 
             Console.Write("Combien de notes d'histoire voulez-vous insérer? : ");
             string strnbNoteHis = Console.ReadLine();
@@ -187,7 +186,7 @@ namespace Calculator3000
 
 
             Console.WriteLine("Votre moyenne est de {0}", dblMoyenneHis);
-            Console.ReadLine();
+
 
             Console.Write("Combien de notes de module 100 voulez-vous insérer? : ");
             string strnbNoteM100 = Console.ReadLine();
@@ -211,7 +210,7 @@ namespace Calculator3000
 
 
             Console.WriteLine("Votre moyenne est de {0}", dblMoyenneM100);
-            Console.ReadLine();
+
 
             Console.Write("Combien de notes de module 101 voulez-vous insérer? : ");
             string strnbNoteM101 = Console.ReadLine();
@@ -235,7 +234,7 @@ namespace Calculator3000
 
 
             Console.WriteLine("Votre moyenne est de {0}", dblMoyenneM101);
-            Console.ReadLine();
+
 
             Console.Write("Combien de notes de module 304 voulez-vous insérer? : ");
             string strnbNoteM304 = Console.ReadLine();
@@ -259,7 +258,7 @@ namespace Calculator3000
 
 
             Console.WriteLine("Votre moyenne est de {0}", dblMoyenneM304);
-            Console.ReadLine();
+
 
             Console.WriteLine("Atelier : {0}", dblMoyenneAt);
             Console.WriteLine("Français : {0}", dblMoyenneFr);
@@ -271,6 +270,54 @@ namespace Calculator3000
             Console.WriteLine("Module 101 : {0}", dblMoyenneM101);
             Console.WriteLine("Module 304 : {0}", dblMoyenneM304);
             Console.ReadLine();
+
+            if (EstPromu(dblMoyenneAt, dblMoyenneFr,dblMoyenneMa,dblMoyennePhy,dblMoyenneAng,dblMoyenneHis))
+            {
+                Console.WriteLine("Vous êtes promu");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Vous êtes non-promu");
+                Console.ReadLine();
+            }
+        }
+
+        static bool EstPromu(double dblMoyenneAt, double dblMoyenneFr, double dblMoyenneMa, double dblMoyennePhy, double dblMoyenneAng, double dblMoyenneHis)
+        {
+            if (dblMoyenneAt < 4)
+            {
+                return false;
+            }
+
+            int iMoyennesInsuffisantes = 0;
+            if (dblMoyenneFr < 4)
+            {
+                iMoyennesInsuffisantes++;
+            }
+            if (dblMoyenneMa < 4)
+            {
+                iMoyennesInsuffisantes++;
+            }
+            if (dblMoyennePhy < 4)
+            {
+                iMoyennesInsuffisantes++;
+            }
+            if (dblMoyenneAng < 4)
+            {
+                iMoyennesInsuffisantes++;
+            }
+            if (dblMoyenneHis < 4)
+            {
+                iMoyennesInsuffisantes++;
+            }
+            
+            if (iMoyennesInsuffisantes > 2)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }
