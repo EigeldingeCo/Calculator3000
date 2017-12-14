@@ -46,7 +46,7 @@ namespace Calculator3000
             double dblNoteSaisieM304;
             double dblMoyenneM304;
 
-            Console.Write("Combien de notes d'atelier voulez-vous insérer? : ");
+            Console.Write("Combien de notes d'atelier voulez-vous insérer ? : ");
             string strnbNoteAt = Console.ReadLine();
             int iNbNoteAt = Convert.ToInt32(strnbNoteAt);
             int iNoteResAt = iNbNoteAt;
@@ -69,7 +69,7 @@ namespace Calculator3000
 
             Console.WriteLine("Votre moyenne est de {0}", dblMoyenneAt);
 
-            Console.Write("Combien de notes de français voulez-vous insérer? : ");
+            Console.Write("Combien de notes de français voulez-vous insérer ? : ");
             string strnbNoteFr = Console.ReadLine();
             int iNbNoteFr = Convert.ToInt32(strnbNoteFr);
             int iNoteResFr = iNbNoteFr;
@@ -92,7 +92,7 @@ namespace Calculator3000
             Console.WriteLine("Votre moyenne est de {0}", dblMoyenneFr);
 
 
-            Console.Write("Combien de notes de math voulez-vous insérer? : ");
+            Console.Write("Combien de notes de math voulez-vous insérer ? : ");
             string strnbNoteMa = Console.ReadLine();
             int iNbNoteMa = Convert.ToInt32(strnbNoteMa);
             int iNoteResMa = iNbNoteMa;
@@ -116,7 +116,7 @@ namespace Calculator3000
             Console.WriteLine("Votre moyenne de math est de {0}", dblMoyenneMa);
 
 
-            Console.Write("Combien de notes de physique voulez-vous insérer? : ");
+            Console.Write("Combien de notes de physique voulez-vous insérer ? : ");
             string strnbNotePhy = Console.ReadLine();
             int iNbNotePhy = Convert.ToInt32(strnbNotePhy);
             int iNoteResPhy = iNbNotePhy;
@@ -140,7 +140,7 @@ namespace Calculator3000
             Console.WriteLine("Votre moyenne est de {0}", dblMoyennePhy);
 
 
-            Console.Write("Combien de notes d'anglais voulez-vous insérer? : ");
+            Console.Write("Combien de notes d'anglais voulez-vous insérer ? : ");
             string strnbNoteAng = Console.ReadLine();
             int iNbNoteAng = Convert.ToInt32(strnbNoteAng);
             int iNoteResAng = iNbNoteAng;
@@ -164,7 +164,7 @@ namespace Calculator3000
             Console.WriteLine("Votre moyenne est de {0}", dblMoyenneAng);
 
 
-            Console.Write("Combien de notes d'histoire voulez-vous insérer? : ");
+            Console.Write("Combien de notes d'histoire voulez-vous insérer ? : ");
             string strnbNoteHis = Console.ReadLine();
             int iNbNoteHis = Convert.ToInt32(strnbNoteHis);
             int iNoteResHis = iNbNoteHis;
@@ -188,7 +188,7 @@ namespace Calculator3000
             Console.WriteLine("Votre moyenne est de {0}", dblMoyenneHis);
 
 
-            Console.Write("Combien de notes de module 100 voulez-vous insérer? : ");
+            Console.Write("Combien de notes de module 100 voulez-vous insérer ? : ");
             string strnbNoteM100 = Console.ReadLine();
             int iNbNoteM100 = Convert.ToInt32(strnbNoteM100);
             int iNoteResM100 = iNbNoteM100;
@@ -212,7 +212,7 @@ namespace Calculator3000
             Console.WriteLine("Votre moyenne est de {0}", dblMoyenneM100);
 
 
-            Console.Write("Combien de notes de module 101 voulez-vous insérer? : ");
+            Console.Write("Combien de notes de module 101 voulez-vous insérer ? : ");
             string strnbNoteM101 = Console.ReadLine();
             int iNbNoteM101 = Convert.ToInt32(strnbNoteM101);
             int iNoteResM101 = iNbNoteM101;
@@ -236,7 +236,7 @@ namespace Calculator3000
             Console.WriteLine("Votre moyenne est de {0}", dblMoyenneM101);
 
 
-            Console.Write("Combien de notes de module 304 voulez-vous insérer? : ");
+            Console.Write("Combien de notes de module 304 voulez-vous insérer ? : ");
             string strnbNoteM304 = Console.ReadLine();
             int iNbNoteM304 = Convert.ToInt32(strnbNoteM304);
             int iNoteResM304 = iNbNoteM304;
@@ -269,16 +269,16 @@ namespace Calculator3000
             Console.WriteLine("Module 100 : {0}", dblMoyenneM100);
             Console.WriteLine("Module 101 : {0}", dblMoyenneM101);
             Console.WriteLine("Module 304 : {0}", dblMoyenneM304);
-            Console.ReadLine();
+
 
             if (EstPromu(dblMoyenneAt, dblMoyenneFr,dblMoyenneMa,dblMoyennePhy,dblMoyenneAng,dblMoyenneHis))
             {
-                Console.WriteLine("Vous êtes promu");
+                Console.WriteLine("Bravo, vous êtes promu (:");
                 Console.ReadLine();
             }
             else
             {
-                Console.WriteLine("Vous êtes non-promu");
+                Console.WriteLine("Désolé, vous êtes non-promu ):");
                 Console.ReadLine();
             }
         }
